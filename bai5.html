@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
 </html>
+<script>
+  function checkSNT(n) {
+    if (n < 2) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function sumSNT() {
+    let arr = [1, 2, 3, 5, 6, 1, 8, 4, 10, 1, 11];
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (checkSNT(arr[i])) {
+        sum += arr[i];
+      }
+    }
+    return sum;
+  }
+
+  let result = sumSNT();
+  document.write(`Tổng các số nguyên tố trong mảng là ${result}`);
+</script>

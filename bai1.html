@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
 </html>
+<script>
+    let mang = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    function deleterArr(arr, x) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] != x) {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+
+    let input = +prompt("Nhập giá trị muốn xóa: ");
+    let result = deleterArr(mang, input);
+
+    document.write(result.join(", "));
+</script>
